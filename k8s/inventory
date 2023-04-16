@@ -1,13 +1,11 @@
 [controllers]
 c1 ansible_ssh_host=10.0.0.200
-c2 ansible_ssh_host=10.0.0.201
-c3 ansible_ssh_host=10.0.0.202
 
 [nodes]
-n1 ansible_ssh_host=10.0.0.203
-n2 ansible_ssh_host=10.0.0.204
-n3 ansible_ssh_host=10.0.0.205
-n4 ansible_ssh_host=10.0.0.206
+n1 ansible_ssh_host=10.0.0.201
+n2 ansible_ssh_host=10.0.0.202
+n3 ansible_ssh_host=10.0.0.203
+n4 ansible_ssh_host=10.0.0.204
 
 [all:vars]
 ansible_user=vagrant

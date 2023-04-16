@@ -1,0 +1,10 @@
+ansible 
+
+
+sudo kubeadm join 10.0.0.200:6443 --token a1xr9j.uavoc7r13vf9scfa \
+	--discovery-token-ca-cert-hash sha256:9c8909f902bca2936fa7d1b69bf940b590eac6881f9e924964f69b73523eb744
+  
+
+
+sudo echo Acquire:http:Proxy “http://192.168.121.221:3142″;
+

@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Create a apt proxy
+      file:
+        path: "/etc/apt/apt.conf.d/02proxy"
+        state: "touch"
+
+    - name: add the proxy server
+      blockinfile:
+        path: "/etc/apt/apt.conf.d/02proxy"
+        block: |
+          Acquire:http:Proxy "http://192.168.122.1:3142";
+
+    - name: Update and upgrade apt packages
+      become: true
+      apt:
+        upgrade: yes
+        update_cache: yes
+        cache_valid_time: 3600
